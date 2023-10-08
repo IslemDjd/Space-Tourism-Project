@@ -4,7 +4,7 @@ pageName = pageName[pageName.length -1];
 console.log(pageName);
 
 if(pageName === ""){
-    const ind = document.getElementsByClassName("index");
+    const ind = document.getElementById("hoverLine");
     ind.style.backgroundColor = "white";
 }
 else{
