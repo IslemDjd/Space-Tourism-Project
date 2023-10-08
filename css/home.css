@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "MyFont1";
+    src: url(../font/Bellefair-Regular.ttf);
+}
+
+@font-face {
+    font-family: "MyFont2";
+    src: url(../font/BarlowCondensed-Regular.ttf);
+}
+.homeframe{
+    width: 90%;
+    /* height: 400px; */
+    margin: 10% auto;
+    display: flex;
+}
+
+.lefthomeframe{
+    width: 50%;
+    margin-bottom: 0;
+}
+.lefthomeframe h5{
+    font-family: MyFont2;
+    color: #D0D6F9;
+    font-size: 28px;
+    font-weight: 100;
+    letter-spacing: 4.75px;
+    margin: 0;
+}
+.lefthomeframe h1{
+    font-size: 150px;
+    color: white;
+    font-family: MyFont1;
+    font-weight: 500;
+    margin: 0;
+}
+
+.lefthomeframe p{
+    width: 80%;
+    color: #d0d6f9;
+    font-family: MyFont1;
+    margin: 0;
+}
+.righthomeframe{
+    width: 50%;
+    display: flex;
+}
+
+.mainbutton{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    margin: 10% auto;
+    border-radius: 50%;
+    font-family: MyFont1;
+    color: #0b0d17;
+    font-size: 28px;
+    border: 0;
+}
+
+.mainbutton:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 10px 50px rgb(67, 67, 67, 0.9);
+    transition: 0.8s all ease-in-out;
+}
+
+@media screen and (min-width:551px) and (max-width: 850px) {
+    body{
+        background-image: url(../assets/home/background-home-tablet.jpg);
+    }
+    .homeframe{
+        display: block;
+        width: 80%;
+    }
+
+    .lefthomeframe{
+        width: 100%;
+        text-align: center;
+    }
+
+    .lefthomeframe p{
+        width: 100%;
+    }
+
+    .righthomeframe{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    body{
+        background-image: url(../assets/home/background-home-mobile.jpg);
+        
+    }
+    .homeframe{
+        display: block;
+        width: 80%;
+    }
+
+    .lefthomeframe{
+        width: 100%;
+        text-align: center;
+    }
+    .lefthomeframe h1{
+        font-size: 100px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .lefthomeframe h5{
+        font-size: 15px;
+        margin: 20px auto;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+    
+    .lefthomeframe p{
+        margin: 20px auto;
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .righthomeframe{
+        width: 100%;
+    }
+    
+}

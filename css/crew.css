@@ -1,0 +1,155 @@
+body{
+    background-image: url(../assets/crew/background-crew-desktop.jpg);
+}
+
+@font-face {
+    font-family: "MyFont1";
+    src: url(../font/Bellefair-Regular.ttf);
+}
+
+@font-face {
+    font-family: "MyFont2";
+    src: url(../font/BarlowCondensed-Regular.ttf);
+}
+
+
+.frame{
+    width: 80%;
+    margin: 40px auto;
+    color: white;
+    font-family: MyFont2;
+}
+
+.pageTitle{
+    font-size: 22px;
+    margin: 50px 0;
+    >:first-child{
+        font-weight: 900;
+        color: gray;
+    }
+}
+
+.planetFrame{
+    display: flex;
+    width: 100%;
+}
+
+
+.rightside{
+    width: 40%;
+}
+
+.rightside img {
+    width: 100%;
+}
+
+.leftside{
+    width: 60%;
+}
+
+.header{
+    width: 100%;
+    margin: 20% 0 5% 0;
+    font-family: MyFont1;
+}
+
+.header h6{
+    font-size: 30px;
+    color: gray;
+    margin: 0;
+    font-weight: 100;
+}
+.header h1{
+    margin: 0;
+    font-size: 50px;
+    /* margin: 10% 0; */
+    font-weight: 100;
+}
+
+.description{
+    width: 90%;
+    
+}
+
+.description p{
+    font-weight:100;
+    color: #d0d6f9;
+    font-size: 22px;
+}
+
+.tabs{
+    margin: 10% 0;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs div{
+    width: 15px;
+    height: 15px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+
+
+
+
+@media screen and (min-width:551px) and (max-width: 850px) {
+    body{
+        background-image: url(../assets/crew/background-crew-tablet.jpg);
+    }
+
+    .planetFrame{
+        flex-direction: column;
+    }
+
+    .leftside{
+        width: 100%;
+        text-align: center;
+
+        >.description{
+            width: 100%;
+        }
+
+        .tabs{
+            margin: 10% auto;
+        }
+    }
+
+    .rightside{
+        width: 100%;
+
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    body{
+        background-image: url(../assets/crew/background-crew-mobile.jpg);
+    }
+
+    .planetFrame{
+        flex-direction: column-reverse;
+    }
+
+    .leftside{
+        width: 100%;
+        text-align: center;
+
+        >.description{
+            width: 100%;
+        }
+
+        .tabs{
+            margin: 10% auto;
+        }
+    }
+
+    .rightside{
+        width: 100%;
+
+    }
+    
+    
+}

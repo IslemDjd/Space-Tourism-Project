@@ -1,0 +1,278 @@
+body{
+    background-image: url(../assets/destination/background-destination-desktop.jpg);
+}
+
+@font-face {
+    font-family: "MyFont1";
+    src: url(../font/Bellefair-Regular.ttf);
+}
+
+@font-face {
+    font-family: "MyFont2";
+    src: url(../font/BarlowCondensed-Regular.ttf);
+}
+
+.frame{
+    width: 80%;
+    margin: 40px auto;
+    color: white;
+    font-family: MyFont2;
+}
+
+.pageTitle{
+    font-size: 22px;
+    margin: 50px 0;
+    >:first-child{
+        font-weight: 900;
+        color: gray;
+    }
+}
+
+.planetFrame{
+    display: flex;
+    width: 100%;
+}
+
+.leftside{
+    width: 50%;
+}
+.leftside img {
+    width: 90%;
+    margin-top: 10%;
+}
+
+.rightside{
+    width: 50%;
+}
+
+.tabs{
+    width: 100%;
+}
+
+.tabs ul{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.tabs ul div{
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs a{
+    text-decoration: none;
+    color: white;
+}
+
+.tabs a span{
+    font-size: 18px;
+}
+
+.tabs #hoverLine{
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    /* background-color: white; */
+}
+.tabs a:hover +#hoverLine{
+    background-color: gray;
+}
+
+.header{
+    width: 90%;
+    margin-left: 10%;
+    font-family: MyFont1;
+    font-size: 50px;
+}
+
+.header h1{
+    margin: 10% 0;
+    font-weight: 100;
+}
+
+.description{
+    width: 90%;
+    margin-left: 10%;
+    
+}
+
+.description p{
+    font-weight:100;
+    color: #d0d6f9;
+    font-size: 22px;
+}
+
+.rightside hr{
+    width: 90%;
+    margin: 10%;
+    margin-left: 10%;
+    border: 1px solid gray;
+}
+
+.tripInfo{
+    display: flex;
+}
+
+.tripInfo div{
+    width: 50%;
+    margin-left: 10%;
+    >:first-child{
+        color: #d0d6f9;
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    >:last-child{
+        font-family: MyFont1;
+        font-size: 32px;
+        letter-spacing: 2px;
+        margin: 10px 0;
+    }
+}
+
+.tripInfo span{
+    display: block;
+}
+
+
+@media screen and (min-width:551px) and (max-width: 850px) {
+    body{
+        background-image: url(../assets/destination/background-destination-tablet.jpg);
+    }
+
+    .planetFrame{
+        flex-direction: column;
+    }
+
+    .leftside{
+        width: 100%;
+    }
+
+    .leftside img{
+        width: 70%;
+        margin: 10% 15%;
+    }
+
+    .rightside{
+        width: 100%;
+    }
+
+    .tabs{
+        width: 90%;
+    }
+
+    .tabs a span{
+        font-weight: 500;
+    }
+    
+    .pageTitle{
+        letter-spacing: 3px;
+    }
+
+    .header{
+        width: 100%;
+        margin: 0;
+    }
+
+    .header h1{
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .description{
+        width: 100%;
+        margin-left: 0;
+        
+    }
+    
+    .description p{
+        text-align: center;
+    }
+
+    .rightside hr{
+        width: 100%;
+        margin-left: 0;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    body{
+        background-image: url(../assets/destination/background-destination-mobile.jpg);
+    }
+    
+    .pageTitle{
+        letter-spacing: 3px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+
+    .planetFrame{
+        flex-direction: column;
+    }
+
+    .leftside{
+        width: 100%;
+    }
+
+    .leftside img{
+        margin: 10% 5%;
+    }
+
+    .rightside{
+        width: 100%;
+    }
+
+    .tabs{
+        width: 90%;
+    }
+
+    .tabs a span{
+        font-weight: 500;
+    }
+    
+    .header{
+        width: 100%;
+        margin: 0;
+    }
+
+    .header h1{
+        margin: 20px 0;
+        text-align: center;
+        font-size: 90px;
+    }
+
+    .description{
+        width: 100%;
+        margin-left: 0;
+        
+    }
+    
+    .description p{
+        text-align: center;
+    }
+    
+    .rightside hr{
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .tripInfo{
+        flex-direction: column;
+        
+        >:first-child{
+            margin-bottom: 30px;
+        }
+    }
+
+    .tripInfo div{
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+}

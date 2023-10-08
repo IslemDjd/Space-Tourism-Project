@@ -1,0 +1,169 @@
+@font-face {
+    font-family: "MyFont";
+    src: url(../font/BarlowCondensed-Regular.ttf);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    background-image: url(../assets/home/background-home-desktop.jpg);
+    background-size: cover;
+    overflow-x: hidden;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+nav{
+    font-family: MyFont;
+    display: flex;
+    align-items: center;
+    width: 97%;
+    height: 60px;
+    margin-top: 30px;
+    margin-left: 3%;
+}
+
+nav .logo{
+    width: 10%;
+}
+nav hr{
+    width: 30%;
+    border: 1px solid gray;
+}
+
+nav .navElements{
+    width: 60%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+#hoverLine{
+    height: 5%;
+    background-color: transparent;
+}
+.navElements a:hover + #hoverLine{
+    background-color: gray;
+}
+
+.navElements a:active + #hoverLine{
+    background-color: white;
+}
+
+nav ul{
+    display:flex;
+    width: 100%;
+    justify-content: space-around;
+    list-style: none;
+    color: white;
+}
+
+
+nav ul div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+li span:first-child{
+    font-size: 15px;
+    font-weight: 900;
+}
+
+li span:nth-child(2){
+    font-size: 15px;
+    font-weight: 100;
+}
+
+nav a{
+    text-decoration:none;
+    color: white;
+}
+
+.toggle{
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    z-index: 99;
+    display: none;
+    
+}
+
+#close{
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    z-index: 99;
+    display: none;
+}
+
+
+@media screen and (min-width:551px) and (max-width: 850px) {
+    nav hr{
+        width: 0;
+    }
+
+    nav .navElements{
+        width: 75%;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    nav hr{
+        width: 0;
+    }
+
+    nav .navElements{
+        display: none;
+        /* position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%; */
+    }
+
+    .toggle{
+        display: block;  
+    }
+
+    nav .active{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .active ul{
+        display: block;
+        margin: 50% 0;
+        padding: 0;
+    }
+
+    .active ul div{
+        flex-direction: row;
+        margin: 20px 0;
+    }
+
+    .active ul div a{
+        margin-left: 20px;
+    }
+
+    .upperLiSpan{
+        display: none;
+    }
+    
+
+    
+}
