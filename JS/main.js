@@ -1,6 +1,7 @@
 const pagePath = window.location.pathname;
 pageName = pagePath.split('/');
 pageName = pageName[pageName.length -1];
+console.log(pageName);
 const nm = document.getElementsByClassName(pageName)[0];
 nm.style.backgroundColor = "white";
 if(pageName !== "index.html"){
@@ -10,7 +11,6 @@ if(pageName !== "index.html"){
 
 
 
-console.log(pageName);
 
 
 
