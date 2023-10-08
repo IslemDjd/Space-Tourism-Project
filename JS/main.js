@@ -2,12 +2,17 @@ const pagePath = window.location.pathname;
 pageName = pagePath.split('/');
 pageName = pageName[pageName.length -1];
 console.log(pageName);
-const nm = document.getElementsByClassName(pageName)[0];
-nm.style.backgroundColor = "white";
-if(pageName !== "index"){
+
+if(pageName === ""){
+    document.getElementsByClassName("index").style.backgroundColor = "white";
+}
+else{
+    const nm = document.getElementsByClassName(pageName)[0];
+    nm.style.backgroundColor = "white";
     const nd = document.getElementsByClassName(pageName)[1];
     nd.style.backgroundColor = "white";
 }
+
 
 
 
