@@ -241,9 +241,10 @@ body{
     }
 
     .header h1{
-        margin: 20px 0;
+        width: 90%;
+        margin: 20px auto;
         text-align: center;
-        font-size: 90px;
+        font-size: 70px;
     }
 
     .description{

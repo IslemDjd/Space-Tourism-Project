@@ -58,7 +58,7 @@
         
         <div class="header">
           <h6>MISSION SPECIALIST</h6><br>
-          <h1>MARK SHUTTLEWORTH</h1>
+          <h1>MARK SHUTTLE<span id="namespace" style="display:none;"> </span>WORTH</h1>
         </div>
         <div class="description">
           <p>Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
@@ -87,5 +87,12 @@
 </body>
 <script src="JS/responsiveNav.js"></script>
 <script src="JS/main.js"></script>
-
+<script>
+  if(window.innerWidth <= 550){
+    document.getElementById('namespace').style.display = "inline";
+  }
+  else{
+    document.getElementById('namespace').style.display = "none";
+  }
+</script>
 </html>
