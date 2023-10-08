@@ -4,7 +4,8 @@ pageName = pageName[pageName.length -1];
 console.log(pageName);
 
 if(pageName === ""){
-    document.getElementsByClassName("index").style.backgroundColor = "white";
+    const ind = document.getElementsByClassName("index");
+    ind.style.backgroundColor = "white";
 }
 else{
     const nm = document.getElementsByClassName(pageName)[0];
