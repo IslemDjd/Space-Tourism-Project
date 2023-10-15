@@ -19,3 +19,7 @@ closePNG.addEventListener('click',() =>{
     toggleButton.style.display = "block";
 
 });
+
+function pageReload(){
+    window.location.reload();  
+}

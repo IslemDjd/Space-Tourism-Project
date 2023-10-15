@@ -12,17 +12,7 @@ else{
     nm.style.backgroundColor = "white";
     const nd = document.getElementsByClassName(pageName)[1];
     nd.style.backgroundColor = "white";
-}
-
-
-
-
-
-
-
-function pageReload(){
-    window.location.reload();  
-}
+};
 
 
 if(pageName === "technology-vehicle"){
