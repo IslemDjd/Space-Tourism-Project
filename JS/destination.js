@@ -44,39 +44,47 @@ if (typeof window === 'undefined') {
   const distance = document.getElementById("distance");
   const travel = document.getElementById("travel");
   const img = document.getElementById("image");
+  document.getElementById("line1").style.backgroundColor = "white";
 
    moon.addEventListener('click', () => {
-      name.textContent = jsonData.destinations[0].name;
-      description.textContent = jsonData.destinations[0].description;
-      distance.textContent = jsonData.destinations[0].distance;
-      travel.textContent = jsonData.destinations[0].travel;
-      img.src = jsonData.destinations[0].images.png;
+    handleData(0);
+    changeColor();
+    document.getElementById("line1").style.backgroundColor = "white";
   });
 
   mars.addEventListener('click', () => {
-      name.textContent = jsonData.destinations[1].name;
-      description.textContent = jsonData.destinations[1].description;
-      distance.textContent = jsonData.destinations[1].distance;
-      travel.textContent = jsonData.destinations[1].travel;
-      img.src = jsonData.destinations[1].images.png;
+    handleData(1);
+    changeColor();
+    document.getElementById("line2").style.backgroundColor = "white";
 
   });
 
   europa.addEventListener('click', () => {  
-      name.textContent = jsonData.destinations[2].name;
-      description.textContent = jsonData.destinations[2].description;
-      distance.textContent = jsonData.destinations[2].distance;
-      travel.textContent = jsonData.destinations[2].travel;
-      img.src = jsonData.destinations[2].images.png;
+    handleData(2);
+    changeColor();
+    document.getElementById("line3").style.backgroundColor = "white";
 
   });
 
   titan.addEventListener('click', () => {
-      name.textContent = jsonData.destinations[3].name;
-      description.textContent = jsonData.destinations[3].description;
-      distance.textContent = jsonData.destinations[3].distance;
-      travel.textContent = jsonData.destinations[3].travel;
-      img.src = jsonData.destinations[3].images.png;
+    handleData(3);
+    changeColor();
+    document.getElementById("line4").style.backgroundColor = "white";
 
   });
   
+
+  function handleData(index){
+      name.textContent = jsonData.destinations[index].name;
+      description.textContent = jsonData.destinations[index].description;
+      distance.textContent = jsonData.destinations[index].distance;
+      travel.textContent = jsonData.destinations[index].travel;
+      img.src = jsonData.destinations[index].images.png;
+  }
+
+  function changeColor(){
+    document.getElementById("line1").style.backgroundColor = "transparent";
+    document.getElementById("line2").style.backgroundColor = "transparent";
+    document.getElementById("line3").style.backgroundColor = "transparent";
+    document.getElementById("line4").style.backgroundColor = "transparent";
+  }

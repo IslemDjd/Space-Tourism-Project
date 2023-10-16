@@ -43,37 +43,43 @@ if (typeof window === 'undefined') {
   const bio = document.getElementById("bio");
   const role = document.getElementById("role");
   const memberImage = document.getElementById("crewImg");
+  document.getElementById("crew-commander").style.backgroundColor = "white";
 
   crew1.addEventListener('click', () => {
-      crewName.textContent = jsonData.crew[0].name;
-      bio.textContent = jsonData.crew[0].bio;
-      role.textContent = jsonData.crew[0].role;
-      memberImage.src = jsonData.crew[0].images.png;
-
+    handleData(0);
+    changeColor();
+    document.getElementById("crew-commander").style.backgroundColor = "white";
   });
 
   crew2.addEventListener('click', () => {
-    crewName.textContent = jsonData.crew[1].name;
-    bio.textContent = jsonData.crew[1].bio;
-    role.textContent = jsonData.crew[1].role;
-    memberImage.src = jsonData.crew[1].images.png;
-
+    handleData(1);
+    changeColor();
+    document.getElementById("crew-specialist").style.backgroundColor = "white";
   });
 
   crew3.addEventListener('click', () => {
-    crewName.textContent = jsonData.crew[2].name;
-    bio.textContent = jsonData.crew[2].bio;
-    role.textContent = jsonData.crew[2].role;
-    memberImage.src = jsonData.crew[2].images.png;
-
+    handleData(2);
+    changeColor();
+    document.getElementById("crew-pilot").style.backgroundColor = "white";
   });
-
 
   crew4.addEventListener('click', () => {
-    crewName.textContent = jsonData.crew[3].name;
-    bio.textContent = jsonData.crew[3].bio;
-    role.textContent = jsonData.crew[3].role;
-    memberImage.src = jsonData.crew[3].images.png;
-
+    handleData(3);
+    changeColor();
+    document.getElementById("crew-engineer").style.backgroundColor = "white";
   });
+
+  function handleData(index){
+    crewName.textContent = jsonData.crew[index].name;
+    bio.textContent = jsonData.crew[index].bio;
+    role.textContent = jsonData.crew[index].role;
+    memberImage.src = jsonData.crew[index].images.png;
+  }
+
+  function changeColor(){
+    document.getElementById("crew-commander").style.backgroundColor = "gray";
+    document.getElementById("crew-specialist").style.backgroundColor = "gray";
+    document.getElementById("crew-pilot").style.backgroundColor = "gray";
+    document.getElementById("crew-engineer").style.backgroundColor = "gray";
+  }
   

@@ -8,26 +8,7 @@ if(pageName === ""){
     ind.style.backgroundColor = "white";
 }
 else{
-    const nm = document.getElementsByClassName(pageName)[0];
-    nm.style.backgroundColor = "white";
-    const nd = document.getElementsByClassName(pageName)[1];
-    nd.style.backgroundColor = "white";
+    const whiteLine = document.getElementsByClassName(pageName)[0];
+    whiteLine.style.backgroundColor = "white";
 };
-
-
-if(pageName === "technology-vehicle"){
-    const btn_hover = document.getElementById("btn-one");
-    btn_hover.style.color = "#0d0b17";  
-}
-else{
-    if(pageName === "technology-spaceport"){
-        const btn_hover = document.getElementById("btn-two");
-        btn_hover.style.color = "#0d0b17";  
-    }
-    else{
-        if(pageName === "technology-capsule"){
-            const btn_hover = document.getElementById("btn-three");
-            btn_hover.style.color = "#0d0b17";  
-        }
-    }
-}
+ 

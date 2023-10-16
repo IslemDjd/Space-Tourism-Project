@@ -40,22 +40,42 @@ if (typeof window === 'undefined') {
   const tech3 = document.getElementById("btn-three");
   const name = document.getElementById("name");
   const description = document.getElementById("description");
-  const img = document.getElementById("image");
+  const img = document.getElementById("img");
+  document.getElementById("btn-one").style.backgroundColor = "white";
+  document.getElementById("btn-one").style.color = "#0b0d17";
 
    tech1.addEventListener('click', () => {
-      name.textContent = jsonData.technology[0].name;
-      description.textContent = jsonData.technology[0].description;
-      img.src = jsonData.destinations[0].images.png;
-  });
+      handleData(0);
+      changeColor();
+      document.getElementById("btn-one").style.backgroundColor = "white";
+      document.getElementById("btn-one").style.color = "#0b0d17";
+    });
+    
+    tech2.addEventListener('click', () => {
+      handleData(1); 
+      changeColor();
+      document.getElementById("btn-two").style.backgroundColor = "white";
+      document.getElementById("btn-two").style.color = "#0b0d17";
+    });
+    
+    tech3.addEventListener('click', () => {
+      handleData(2);
+      changeColor();
+      document.getElementById("btn-three").style.backgroundColor = "white";
+      document.getElementById("btn-three").style.color = "#0b0d17";
+    });
+    
+    function handleData(index){
+    name.textContent = jsonData.technology[index].name;
+    description.textContent = jsonData.technology[index].description;
+    img.src = jsonData.technology[index].images.portrait;
+  };
 
-   tech1.addEventListener('click', () => {
-      name.textContent = jsonData.technology[1].name;
-      description.textContent = jsonData.technology[1].description;
-      img.src = jsonData.destinations[1].images.png;
-  });
-
-   tech2.addEventListener('click', () => {
-      name.textContent = jsonData.technology[2].name;
-      description.textContent = jsonData.technology[2].description;
-      img.src = jsonData.destinations[2].images.png;
-  });
+  function changeColor(){
+    document.getElementById("btn-one").style.backgroundColor = "#0b0d17";
+    document.getElementById("btn-one").style.color = "white";
+    document.getElementById("btn-two").style.backgroundColor = "#0b0d17";
+    document.getElementById("btn-two").style.color = "white";
+    document.getElementById("btn-three").style.backgroundColor ="#0b0d17";
+    document.getElementById("btn-three").style.color = "white";
+  }
